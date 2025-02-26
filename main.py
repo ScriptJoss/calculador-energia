@@ -28,18 +28,17 @@ def lights(size):
 @app.route('/<size>/<lights>')
 def electronics(size, lights):
     return render_template(
-                            'electronics.html',
-                            size = size, 
-                            lights = lights                           
-                           )
-
+        'electronics.html',
+        size = size, 
+        lights = lights                           
+    )
 # Cálculo
 @app.route('/<size>/<lights>/<device>')
 def end(size, lights, device):
     return render_template('end.html', 
-                            result=result_calculate(int(size),
-                                                    int(lights), 
-                                                    int(device)
-                                                    )
-                        )
+        result=result_calculate(int(size), 
+                                int(lights), 
+                                int(device)
+        )
+    )
 app.run(debug=True)
