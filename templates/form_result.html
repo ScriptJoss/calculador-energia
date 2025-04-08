@@ -1,19 +1,24 @@
 <!-- Crear una página que emita los datos del usuario -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../static/css/style.css" />
     <title>Resultados del formulario</title>
-</head>
-<body>
+  </head>
+  <body>
     {% block content %}
-    <h1>Gracias por rellenar el formulario.</h1>
-    <p>Tu nombre: {{ name }}</p>
-    <p>Tu E-Mail: {{ email }}</p>
-    <p>Tu dirección: {{ address }}</p>
-    <p>Tu fecha: {{ date }}</p>
+    <!-- Es para poder editar el contenido -->
+    <div class="form__container">
+      <h1>Gracias por rellenar el formulario.</h1>
+      <p>Nombre: <span>{{ name }}</span></p>
+      <p>E-Mail: <span>{{ email }}</span></p>
+      <p>Dirección: <span>{{ address }}</span></p>
+      <p>Fecha: <span>{{ date }}</span></p>
+    </div>
     {% endblock %}
-</body>
+  </body>
 </html>
